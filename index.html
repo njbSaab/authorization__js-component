@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet">
+   <link href="style.css" rel="stylesheet">
+   <title>Autorization</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="form">
+
+         <form class="form__body" id="form" action="#">
+            <h1 class="form__title">Send information by email</h1>
+            <div class="form__item">
+               <label class="form__label" for="fromName">Name*:</label>
+               <input class="form__input _req" id="formName" type="text" name="name">
+            </div>
+            <div class="form__item">
+               <label class="form__label" for="fromEmail">E-mail*:</label>
+               <input class="form__input _req _email" id="formEmail" type="text" name="name">
+            </div>
+
+            <div class="form__item">
+               <div class="form__label">left-handed or right-handed?</div>
+               <div class="options">
+                  <div class="options__item">
+                     <input id="fromRigthHanded" type="radio" class="options__iput" value="right" name="hand">
+                     <label class="options__label" for="fromRigthHanded"> <span> Right-handed</label> </span>
+                  </div>
+                  <div class="options__item">
+                     <input id="fromLeftHanded" 
+                     class="options__iput" value="right" 
+                     type="radio" name="hand">
+                     <label class="options__label" for="fromLeftHanded"> <span>Left-handed</span> </label>
+                  </div>
+               </div>
+            </div>
+
+            <div class="form__item">
+               <label for="formMessage" class="form__label">Message:</label>
+               <textarea name="message" id="formMessage" class="form__input"></textarea>
+            </div>
+
+            <div class="form__item">
+               <div class="select__box">
+                  <div class="form__label">Age:</div>
+
+                  <!-- <select class="select" name="age" id="">
+                  <option value="from 18 to 25" selected="selected">Yong</option>
+                  <option value="from 25 to 45">Strong</option>
+                  <option value="from 45">Super star</option>
+               </select> -->
+
+                  <div class="select">
+                     <div class="selectWrapper">
+                        <div class="selectCustom js-selectCustom">
+                           <div class="selectCustom-trigger">Select age...</div>
+                           <div class="selectCustom-options">
+                              <div class="selectCustom-option" data-value="ds">Yong</div>
+                              <div class="selectCustom-option" data-value="fe">Strong</div>
+                              <div class="selectCustom-option" data-value="be">Super star</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="form__item">
+               <div class="form__label">Add photo</div>
+               <div class="file">
+                  <div class="file__item">
+                     <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+                     <div class="file__btn">Сhoise</div>
+                  </div>
+                  <div id="formPreview" class="file__preview"></div>
+               </div>
+            </div>
+
+            <div class="form__item">
+               <div class="checkbox">
+                  <input type="radio"
+                  name="agreement"  class="checkbox__input _error">
+                  <label for="formAgreement"  class="checkbox__label">
+                     <span>
+                        I agree to the processing of personal information
+                     </span>
+                  </label>
+               </div>
+            </div>
+            <button class="form__button" type="submit">Submit</button>
+         </form>
+      </div>
+   </div>
+
+   <script src="select.js"></script>
+   <script src="/script.js"></script>
+
+</body>
+
+</html>
